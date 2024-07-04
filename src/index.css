@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+:root {
+  --primary-color: #1f242d;
+  --secondry-color: #e7e2e2;
+  --thired-color: #4dc126;
+}
+body {
+  background-color: var(--primary-color);
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--secondry-color);
+  margin: 20px 0;
+}
+.btn {
+  display: flex;
+  gap: 20px;
+  color: var(--primary-color);
+  margin-top: 10px;
+  & button {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+}
+
+h2 {
+  color: var(--secondry-color);
+  font-weight: 600;
+  font-size: 40px;
+}
+.active {
+  background-color: var(--thired-color);
+  color: var(--secondry-color);
+  box-shadow: 0px 0px 10px var(--thired-color);
+}
+
+.timer {
+  background-image: url("./assets/background.png");
+  background-size: cover;
+  width: 326px;
+  height: 326px;
+  position: relative;
+  margin: 20px 0;
+
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.time {
+  position: absolute;
+  left: 117px;
+  top: 157px;
+}
+.container {
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--thired-color);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+footer {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--thired-color);
+}
+.container:hover {
+  box-shadow: 0px 0px 10px var(--thired-color);
+  background-color: var(--thired-color);
+  & i {
+    color: var(--primary-color);
+  }
+}
+i {
+  font-size: 43px;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+}
+.btn-back {
+  color: var(--primary-color);
+  & .back {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+}
+.back:hover {
+  background-color: var(--thired-color);
+  color: var(--secondry-color);
+}
+@-webkit-keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
